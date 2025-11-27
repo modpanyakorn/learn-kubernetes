@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adminer-deployment
+spec:
+  selector:
+    matchLabels:
+      app: adminer-app
+  template:
+    metadata:
+      labels:
+        app: adminer-app
+    spec:
+      containers:
+      - name: adminer-container
+        image: adminer:5.4.1-standalone
+        ports:
+          - containerPort: 8080
+        env:
+          - name: ADMINER_DEFAULT_SERVER
+            valueFrom:
+              configMapKeyRef:
+                name: database-config
+                key: db_url
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: adminer-service
+spec:
+  selector:
+    app: adminer-app
+  ports:
+    - protocol: TCP
+      port: 8999
+      targetPort: 8080
