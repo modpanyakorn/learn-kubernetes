@@ -2,7 +2,7 @@
 # 1. Single Concern Principle
 
 
-![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/fe3f9882c850954d839779a0dac5b696.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=d4A6qBpzYPfVRlYCbi8FgeMIltfvvUwo1GUP8HLeGg%2Bep0acPIKXnSrbkBixVrkBVVtUVVZgOT2utsBvDkfwGEA6%2Bw78vFlsbcxu2LU7nVkwocEnmilINZxxCl7nbYHrQV2e%2F2cUV5vdrUkhk23DrBhCGQDwXmKjiU4tfP%2B7in7SKXlkklgleQkN4x6J17pJ4pJe%2Fch0V1z%2BIZrxlKeCVxfY19NNuhhox%2F4HLZ0ufteCVR614gWAnsoQh1ILmI7TSjQqFDNBWtIU9T1ShrVlW2DpGesxWRfABCKO%2B3D%2Bp3xd58AsXQ%2BZ4N2XVMAhjZrYvdWHQdRaOFXZNd28T9W3Mw%3D%3D)
+![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/486e29f55dd5997b076494de63363268.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=G14KIjDDFKUR%2F6CcBUdjDEdDHsglXA65olg%2FkfRryCiJ696mnBLGMIv7IG3N3gUrhKyyI3bW72rJLJBtysSEyzfnwQ6jehya3MdB3d1mLCFDAOOWQsJNYYzrlx8QKqE6rqClbCmsY0SgyVTvrS%2FTNFFGyBV6x7jgeXxtQuHRUFH68Ow5A4mkAFUfbHmZd3nSDQKayUtbcUGKYTr%2Fo67qLKNajAZpOLOM0I1xYuoS00neTT2ZCSresoRF2WY1vRXjojzHrRGDA4jLOwBWYtkkuCO8zgAPT6%2Fehj8JisgHJrhhBZMPXHXIvVZXfgHiobvqc%2BxPH8gxWHVaGJjiIYPt5A%3D%3D)
 
 
 Single Concern Principle หลักการความรับผิดชอบเดียว
@@ -17,7 +17,7 @@ Single Concern Principle หลักการความรับผิดช�
 # 2. Self-Containment Principle
 
 
-![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/1d72068899e6ad7dfefeaef857e943af.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=RCSAuRzYCzd84Hzq08B9IwW7DpFW9XMehVf2C6vdL7S2%2BIfsh2AMId9jGp5Ei8YdENfwC4hrjrOrRIfJr5Pmsxo5P%2F67PF9AmmyclvAyw8pHErDtnFQ5R%2BwJagLxGhlsF3DE9xGIng1QvWgDl0Lp4t4CMOqPosP5me66CfKxuD%2BziNTWqBcEfxRYy4Oc4f5eNhqSYZWhGZX8cCi4I0vgXCSVgBIXrK7HE59o5AtAFHzzVKXhzDptmEdIsuta0hRLA0JRc2%2B43bApxZYirkWfr9cuL31WD1I4ku6UndsVDSNDj%2FI0WLTmHS098MFB7DaNdBGeiCW%2ByYiilKrmxoRAiA%3D%3D)
+![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/2aae796a4af596f14349adaa634b77c9.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=KFhltm9A16H8WC0MBe8D%2BJw2QGE64LqIyrIRqBkxfZBRyrd89txTJbs5V1KzX7F1AAi1M7r%2B5xg%2FkZfPiHAF1SZGAzz36ohp%2BiQSuPrS8JTyQKwHd0G20V6roQ%2BVfotN8wBZJd8FFkk2bd1Aewswk4e%2FBmfzLxjscG3hSTq8ymUpd9sevd9QVBKxy14T7lSsErTwN2WWNFDogOQo%2BS1kxlFZoCKClM0SQSP197RFvegFYkEbit%2FWPgBGnpbAOaSwWXLLG6sYSo6mcybexPCdBVePfvhTfh1YkAap%2B%2BgXQKJp7eA8mjhozKLfTD7%2FVDTGwss1arYPAVhQ5FnCOXPaqg%3D%3D)
 
 
 Container image ควรมีทุก dependency ที่จำเป็นตอน build-time ยกเว้น config, secret อื่นๆ ในช่วงที่ใช้ใน Run Time เพื่อให้ container ไม่พึ่ง environment เฉพาะเจาะจง เช่น ไม่ควรพึ่งพา Libraries หรือ Dependencies ที่ติดตั้งอยู่บน Host Machine (Worker Node)
@@ -27,33 +27,33 @@ Container image ควรมีทุก dependency ที่จำเป็น�
 - ใน K8s ก็จะมี object ที่นำมาใช้ในการเก็บ Configuration ต่างๆ
 	- ConfigMap, Secret เพื่อส่งค่าเข้าไปใน Container ช่วง Run time
 
-		![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/a377eba41b36cc6a323a0739deb7b1f4.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=dR9CtGCd3KKDBrxlKrha1lIjJxHC7xy8W4ADinP3uQKWVh86jFEEQQ6VErkIbvKgAp09Vzy6vG8fhVFbGjn3gJVMeU4kT5NmSPmfLO6NyfTGH3XhDJ00iHqATZPqSiaDv9JhEwMf9TcmPJbJp3EJVOTFHOZmgDWVvRITKbH6o%2FRKT8hm6%2BiaHYNDHXXK5z5%2Bm1jneL29UJDzffPm2eTmx2rSOa%2FHv1aLbsWyyyO%2FLEA320jDBn6EPqhiPY87AJSKCAWtnaIBZk2Ja%2B5OafyJy3WQQ%2FtxDvLiNplpv6YWWPBljoxi3nHpJbPDg76xzhZw9vDCi4FRyHeB3yVE8OfHDA%3D%3D)
+		![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/e37c5cccb13a23b84b5778b7a7c98571.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=Exa1rWjplrljXgDZcT1HFu2%2BrZwbnXCAFU1ph24UN%2FoMabggENjNAILxKXDCyx3UJ7i5g6Hjt%2FNaLTOeDUZGKneGNAydUI4zxLAbxWW4EkXSWilLdLuTmXFtg2LKeM%2FVpb%2Bhm%2BvSbeYqhafNl7ea%2Fh9CdHtACecvWIho7TwvRt051JE2ww7Fb5pCD5t85N2TFUpIbxMTofHKzuSQNJqEBrvm1sBG9wQLZNj8I3VYxO2ytDrsqyzKFXA7pTiyptRFuJJ8u9c9YdB1hPn3LUZ8S41mr0nQwtiC5x8AuV5%2BV0AYDtasgyyNSYnKm91TMM6uPLIK4BEMATU23mHDCzPBaQ%3D%3D)
 
 	- Storage ใช้ Volumes เช่น PersistentVolumeClaim ในการเก็บ data ภายนอก Container โดยที่ถ้า Container ถูกลบออก, down, crash ก็ยังคงอยู่
 
-		![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/413300314fb8281129f8453626de7a02.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=mdHId93fQHQGf58ZVriQyhEl%2Fo3xUvsnt2hDLqAKUdW8BnNHx9YRiXN6C69y2%2FPBqx7nTwx3hWMi%2B8qwRVHPhChIYUDJ6hG1t66%2Fzt71VvEYiAWChXG3IezazzPdZO6pqCDqPIRaU0TV1auETfd8GefvnJyBFYzXhYhvVb0cYFsl8kcBtuJgRba6J7EWN%2Bk8H1v4zPOnWgFo9iGba0UW2m%2BBfW3OT6%2BQKB6jVRTKHtBU7oMVga2J9UoNNbBb0mRE8api2hGhZVvPWdTUaXZMieiv1iUUTyrOpc0CtXznfA3nxxaY3iqE%2FkTOBHjOvF11BDTpAUqjYXqH3NkuKFWmpA%3D%3D)
+		![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/7343b4b19b96487166f7b042af863a76.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=TZ2cXwAvmXTgpVbweDiaElpopLHEObSiK%2ByvvKJpjEZxpq6Q4fygkKPn%2FbwLbGRBMO0dfjkgGg2vSWLLMh%2FBvxbZUkUJ4Xshh9%2BiwanojlR9Yf9g206hZcFpfpADoDyNv%2B6%2BYwGAzlc1pw4nLaSHulHHePv75H%2Fn8WzhhhDuRjftzMFcd5zTjW2KlqNVUhw5UAf1AKTqXr0LKNt2gVSxMVrH9SFMjhl%2B4CLv6kxPr%2F0ByNiz0H%2F9YP9UfxIiC%2F0KMMLrjYk7tqjZlkFkEqY3BE%2FhDblWSp2PfhOdlZtq3CetHUlHoUI%2FPtNZkQLMXRoYD5I8BZnHJD6yr8HEMoVPJg%3D%3D)
 
 
 # 3. Runtime Confinement Principle
 
 
-![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/83585dfe2b312d739e2a5dc3af3bae33.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=Nb6%2FFCyiACJajLE4fJbIFyXB3jycXAVsKrWFh9EVpWJXFEEmk69JTUZ0q83emK8FMLGJy%2BUJhV15yQgLtb9kaA%2BISKzHs9vYeI%2BI6jYNMOfCQk0GnrtiC0fAn3MCxTWYOHEcJmHX3X0P4ZV6D%2Fcr%2Fgm91bSQj2Qr2FdpsCuX%2F%2B3jWFfRiZSCTDVsy3esEJR0TpnvfQjeaLdIK0KBA6CYs%2FftD6jSlMrGEsCdVkmOZVsRh56VPVD3oFChckW53%2BCh9R7NQmDaRFkXI2A9V4oEdrOM0HUoiQuPj08cfZH%2BATNCGUvZPqbIu1EUKc5y3n3Bg8KrhZXNSTK%2Frmwi%2BsdqtA%3D%3D)
+![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/617866225b178163cc593f379d6e5e26.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=q3k7Btf547wOxkOgrYcuCl68t86AJMqMDwc9FA%2FXljrsjNOsmDEYvzdY3LdmbNwdxxoCWOI57u%2FvAjdLfpLIhp2RqrVpbMRXCgKHEOLQqq3JsYzVEwloYw97DAkaHQ21xgB27J8w8ILDf%2F8IBOBetZtbjjkT7Wb%2F41jn%2Bvk4jPBSh2QARzKKo3lMDCNO4lGGWIHAK9cimH4F888GkP3rHrhR2Q1IDksYVPT07qrXbH62zYPMS4UiynHh6LU1bYfGwUvg0zD4VWny2CM9Q6N7DDGG5z%2FzScmwdnuMpVm6cxiAE9XbESjB2l7NJNOf8jnsKv%2FuqJGq%2FgS%2FKV1AhfvwqA%3D%3D)
 
 
 ทุกๆ การรัน Container ใน Environment จำเป็นต้องระบุว่า Container นั้นจะใช้ Resource ของ Platform หรือ Infrastructure เท่าไร?
 
-	- เช่น Python  1 Container จะใช้ cpu, memory, networking เท่าไร? ซึ่งสามารถกำหนดได้
+- เช่น Python  1 Container จะใช้ cpu, memory, networking เท่าไร? ซึ่งสามารถกำหนดได้
 
-		![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/c4a6bc84689dc129827dae8d15656937.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=pEsXEGY8NCrj7tWJGcClHxB%2FERvM3CBzpHHDwqN0HYoaJbIFtcME1mFGdi42kIFoVUYFvvXpoqvhrOsfIxTa%2FcFHGTzdjPtj69nrVHOZDxjCH9uctXbQpSTHGVH%2FLEsq5iaL0k3SqVHT3CMjGnBzrxtBi0NssJ%2B2Gztov0XbLOQi1G88ZN1zpsGYsD%2F2P7AOSSj1AAEop0rwAqcjq72M9ne%2FSpRXs57F6aZDVXbW5nYy6qLF%2FaqJ9Kk4flvbkxQheGrFGlZ7UMme9ksKnWhDCQBH7IXn9bxCho8mw6P%2FKJgsCbCFLUPlbwZ1K%2BU1si1NDybmBJtRkkjbYCMsQ9XQ%2Bw%3D%3D)
+	![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/92d68cfad78792c639d9beb0c3715321.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=jAuqiMFfr21HKoIWfAHoP3M6zDZWJpQZYFRtos2gBhXvp9uLYBbbD7gFawij78vqZSdfe95sVPxUk9Pszd4cXotz%2BLT12tAfhS66CrnaS3flebCODAe7z1cvEMDUWtImpEmCIqHBB46XOWkE%2Bm6qGCXVF1b3MrrdnF3P1qwe88pMPiR1n0b1aUcoRnNgaKgHcgdesuVSGzmZDs41n9SVHulbG9WBBzCgAeDmrYmOVdwkn8%2Bv3sKjw3e%2BXYyOxQXRmkKoS1IurAXEQT%2ByFIqAKJJ7zDu%2FX0zXZ%2BY80teEG2Bm6sw3iZp%2F2nyfsvaXinxnn3vX%2FUZM4W59Wo4EOtJS8w%3D%3D)
 
-	- เพื่อทำให้ Platform รู้ว่าการจะ running Container เพิ่มขึ้นจะต้องใช้ Resource ประมาณไหน แล้ว Platform จะไปตามหา Node ที่เพียงพอจะ running Container
-	- เช่นการทำ Auto Scaling ต้องทราบว่าแต่ละ Container จะใช้ resouce (cpu, memory, ..) อีกเท่าไร เพื่อที่จะให้ Platform provide และจัดการให้
-	- K8s จะรู้ว่า Node มี Resource Usage เท่าไรทำให้รู้ว่าการเพิ่ม Pod ใหม่ควรเพิ่มไปที่ Node ไหน หรือ การเพิ่ม Container เข้าไปใน Pod ควรเพิ่มที่ Pod ไหน
+- เพื่อทำให้ Platform รู้ว่าการจะ running Container เพิ่มขึ้นจะต้องใช้ Resource ประมาณไหน แล้ว Platform จะไปตามหา Node ที่เพียงพอจะ running Container
+- เช่นการทำ Auto Scaling ต้องทราบว่าแต่ละ Container จะใช้ resouce (cpu, memory, ..) อีกเท่าไร เพื่อที่จะให้ Platform provide และจัดการให้
+- K8s จะรู้ว่า Node มี Resource Usage เท่าไรทำให้รู้ว่าการเพิ่ม Pod ใหม่ควรเพิ่มไปที่ Node ไหน หรือ การเพิ่ม Container เข้าไปใน Pod ควรเพิ่มที่ Pod ไหน
 
-	# 4. High Observability Principle
+# 4. High Observability Principle
 
 
-	![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/f7b36a9db98a593f8293c58e820b9155.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=djrdq3yNhGiVLn0oa8FJfSeQvvjPw4kOIv%2ByX3muyZRG8gQn2%2F5fthIj6x%2FABxYfzE56WyUzQL%2B7jSb1DGNPEL69Z86Hsi%2FAHAeTHczrQPHRC16%2B2k%2Bv5bqrz9Y2qEMvMe8YWCUvWNijBUHQen7YF15qZdx9togfWg%2F4MRTvroDw68%2BAgfKOMQM74JFRi3p2TqEyQLeDnyUjlcrp2quIFc95XpicgKs7DDTlALkr6OrPsMasAbXqQ5hzlOz2YsBKy%2BJcTxBwyom52gOiCmXviaRQ01acxImLws7pEvLI0Bsi8G0anPilqbC0VdqwVlgiz77%2F602PP0mfNjkruA6a1w%3D%3D)
+![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/eb36ab786124d33c07a5af5f325d1ab0.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=h4gcIPDl6j33aiEDNsML82e%2BMZYfajwgR%2FFnhxnbAr3jMHSnbXv6iAKXxJy8DRdQ3PsEH98ZHFtUdcE13X%2BjqPEealEXDt%2F7Ro5ZSkRAOCP%2FUKyJH%2FUOLQAQfirXVYVWnjTYkDjlxLBbcrstzZscf1gcxSdGm3h3mcRmx3aXDIANxA7Dx32wvqqxSWmimFxU%2FbqDiQ%2BJsKYMdLksm22g30rNuKs0CeOAJXaOIl%2FA%2FdiQQZdRF2b60WUwX%2FW00%2BNeqfrSCoMmmOGgpGGd7Nuc8u5dfMsuyduppuV4vQMi33YaF5T5j3ZV6ZbzJs3PBF%2FOrxFW9k%2BQw8p4VtQFZlS1YA%3D%3D)
 
 
 Container จะต้องเปิดเผยช่องทางให้ตรวจสอบว่า Container นั้นกำลังทำงานอยู่หรือไม่
@@ -100,7 +100,7 @@ Container จะต้องเปิดเผยช่องทางให้�
 # 5. Life Cycle Conformance Principle
 
 
-![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/3e4b585ca403eda6e786109379f3e374.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=qVfw93skTfIaS9PrjnYwqX8%2Fal1Z84gkO7lufWAmqVF9spZL%2Bk51ytVhmeL51UDpUf%2B0BJC%2FqRog5btq7%2BPB9tU1SKNNzPla%2FhINMRYgwy0wpuvfcZSRYsqt2AuCE73r6NH%2Fb5ERD7hSrN%2FOZkkr2isgKpq5Ltm0qweONJobi9S4boAKRkVk4odfmpGFZS%2FcDAYZK4leyEPaS%2FQoDTzd1Gq3a9XSgAh2e%2BQZHE2oO9e8RjYEqPb0mnpx9QvlpzJ2gvYg81pWRkkTKkx%2Fusvt6vbqo0EL1%2BDnpTFSgcgXc1mm0LJbFnFlZzgXX%2F%2BbWRCcTsJcJNNvj2qZgLKm2LgTBQ%3D%3D)
+![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/9c0d833f18665d748f11bbc08e548005.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=VbtJoBbXncav30wzSC9iDj8qYnUuRv6a7pcdl3CRBdsu49I7pPW35Slf%2BWAeT%2Fu9Tc8yThDzmXGnJLWZT4a8Yb8XdG7jUSgbWMkenmgwar8vvs3xrwCRkvDxGMH5oYTHrBu%2BQ7wiZXUh%2F5KVdv3aq6qZDjamL5a%2FhDB72IX2K6t7rn4mATA9ke9%2Fz8VZbAOFxkVCVkxJPHLRgrl1%2BHSM4Gc9F9ZhQxcKMxuSsIWE57w7KbRxER3zw5F1kxIdWOhqb2oUw5Ke77JGX7q9cfL%2FXvpoeH6BJLYBbhhCYKP099QTHL7FfSntvmwn528Lkv%2F3qpyTqP4MLJgYYm8iv%2BQ9Kw%3D%3D)
 
 
 LCP คือการควบคุมเหตุการณ์ที่ส่งมาจาก platform (Host) เช่น K8s เข้าสู่ container เพื่อจัดการ Application Lifecycle, Container ต้องเปิดเผยช่องทาง APIs เพื่อให้ Platform สามารถ อ่านข้อมูล จาก Container ได้ เช่น
@@ -117,7 +117,7 @@ LCP คือการควบคุมเหตุการณ์ที่ส�
 # 6. Image Immutability Principle
 
 
-![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/473181fa59e21833e59e680315efaf68.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=GiKKs6g%2Fx%2B6r7bhioByNK9uU9ak1%2FjwDOhXPiGR7j0OfQ5MO33lHYr%2B7W1njOE2%2BF3VrSRqZwptt5Xr30%2BsOFSJ3kQWwxQxCp%2FYyU%2F3GKoxbMB3IPEK9jPlK1higHk%2BRLo7Gve7i43CM06%2FQPiGemP3RYFgYU%2BZCNdtiPLSSij7NJ%2F1rkYhRxS60CLgyKXIbANlaqBx31dGqh24SG58Sf9fF4WAg5BEfc6iNB2crQYiEzpCL7QGi5kVLANQTpRGst3yquya%2BCFEgmkSaJtnChk0Sor8GKDCSxP5QWIPKAlO0EO1JYT7uLugQ%2BNQC7a%2Fgs9ldRhmpdOAPOP5Iob2uYw%3D%3D)
+![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/30ef0f3b18d5616cdc737ed777f2bdfc.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=nGpWBGZ9U0rMpj9NVoxmD9eSiQFVyvI6m%2BwY0R8FfxF%2FodA0vBLvt%2FipAZC8wpOBKtoDniTb4eAIpCcX%2BJVLo2pbqWHEo7JioJwyFBTNvyaX6XGFKNfVekDyPaK45c8hBBAdpiB9b46iqRgnQeA%2FdV9hCwHZDXErl06xf4I7xBMIv1Wwg7JS%2BoswtBfe2ZtTFCW29ecJNKFCKKEcwHpHpZMmAEFMLA7FqufNokVkR0LseJi9dB2svFxsKkZHc98TMAL4Ld8shDmYsMlbxHABYJi7kUd6sT1%2F1ThXr%2FtcK%2BzqcYujr7Q2e%2BvqybcAr4PkkXpBJVlqujmHDPyi1RE3EQ%3D%3D)
 
 
 (Image สร้างครั้งเดียวใช้ได้ทุก Environments) ทุก Container ที่ทำงานแต่ละ Environment, Container เหล่านั้นจะถูก build จาก Image แค่ครั้งเดียว โดยทำการ Configuration ภายนอก และไม่อยู่ใน Container เช่น
@@ -131,7 +131,7 @@ LCP คือการควบคุมเหตุการณ์ที่ส�
 # 7. Process Disposability Principle
 
 
-![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/b308d6440068e17e954587c02d0d13c6.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=NcGnt8xqeTMIYN59zl%2BCCvmXQe5a0auQImOmvYVp%2BwQoElewtgDOWNBZhvm4BGzCFzL4HlKJI5oa4zDoEEeWwygxNG82OsUXYvB%2BVbhPqXUk5W1J2Tofd8PLtYgOv1IbuRSPuuFsDbk29OemRmrBtQaKfM9Od70QaqbkoYD4mfdJdpEsWQaaj8lxOYnJ99IUuB8hMRGtdXIgeGKRJ5beTrf6UOsS9ylsTEp67lgATTX8PdwS2lfSH3WkhLabrLS8frr6Yv9Wy5X3oj%2BIpQM%2FFlYcMoOCwH4REFdKsStLctXTHABS%2BXa1zMS5O4I9Q3E31D6%2FRobHW3Jpv%2FdviQdkaQ%3D%3D)
+![image.png](https://storage.googleapis.com/dashboard-51ba6.appspot.com/031d32f9699606e87d754accdc435933.png?GoogleAccessId=firebase-adminsdk-jd298%40dashboard-51ba6.iam.gserviceaccount.com&Expires=16725225600&Signature=Ym7sfkztm31ggIbUtVfHZRdQ465ZW8kheLZewnAFMXhBDRjr3%2FB%2BUv08%2BD5ZMXzkchCwX9QYX9aIdofw2apofcqabX4IlY1DVW6V0W0PUgz8jSlXytP8Wk37UvrCZJFlCEnHOzcRC1uJjW7S9XwT9aWZEpEfRejHhOHX8VUSzQy658dKot82VKs8zdlicrQh2Bbx72Za1g7Ck0TQDIKvzuSToVS7vIKhTJudBGxzKkOjciFHrUNYvOq84L2rGwAJJ%2Fh%2FxlCfITz3ZhFNFCOMQo7MRxfu7vUhRykfjcT3d9s3GvCxmvznXbvVFRfcDNOoqPTCK9vxziCBJhxWNujP%2Bw%3D%3D)
 
 
 Container ควรถูกออกแบบมาให้สามารถ ถูกเริ่มต้น หรือถูกหยุด ได้อย่างรวดเร็ว และสามารถถูกทำลายทิ้งไป  Disposed ได้ตลอดเวลาโดยไม่ส่งผลกระทบต่อระบบ
