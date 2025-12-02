@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec:
+  selector:
+    matchLabels:
+      app: api-pod
+  template:
+    metadata:
+      labels:
+        app: api-pod
+    spec:
+      containers:
+        - name: api-container
+          image: panyakorn130547/snappy-chat-backend:0.2
+          ports:
+            - containerPort: 4000
+          env:
+            - name: PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: backend-config
+                  key: internal_api_port
+            - name: MONGO_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: backend-config
+                  key: db_url
+            - name: FRONTEND_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: backend-config
+                  key: frontend_url
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: api-pod
+  ports:
+    - protocol: TCP
+      port: 4001
+      targetPort: 4000

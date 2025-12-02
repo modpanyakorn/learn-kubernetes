@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+data:
+  db_url: mongodb://database-service:5000
+  internal_api_port: "4000"
+  frontend_url: frontend-service:3000
+  api_service_url: http://backend-service:4001
